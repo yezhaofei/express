@@ -1,0 +1,178 @@
+@CHARSET "UTF-8";
+#upRule:hover   {background-color: #4174ff;}
+#logout:hover   {background-color: #4174ff;}
+
+.divDragShow {
+	margin-top: 15px;
+	width: 20%;
+	height: 600px;
+	background: #262C43;
+	margin-right: -25%;
+	border-radius: 6px;
+	-webkit-transition: margin-right 0.3s;
+	-moz-transition: margin-right 0.3s;
+	transition: margin-right 0.3s;
+	-webkit-transition-timing-function:ease;
+	transition-timing-function:ease;
+}
+
+.divEquip {
+    margin-top: 3px;
+    width: 20%;
+    height: 600px;
+    background: #262C43;
+    margin-right: -25%;
+    border-radius: 6px;
+    -webkit-transition: margin-right 0.3s;
+    -moz-transition: margin-right 0.3s;
+    transition: margin-right 0.3s;
+    -webkit-transition-timing-function:ease;
+    transition-timing-function:ease;
+}
+
+#divET {
+	margin-top: 20px;
+	margin-left: 0px;
+	margin-right: -3px;
+	color: #ffffff;
+}
+
+#divEquipTree {
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: -3px;
+    color: #ffffff;
+}
+
+.mobile-right {
+	float: right;
+	margin-right: 20px;
+}
+
+.mobile-right_equip {
+    float: right;
+    margin-right: 20px;
+}
+
+.dragUl {
+	margin-top: 10px;
+	margin-left: -35px;
+	margin-right: 5px;
+}
+
+.rr3{
+	margin-top: 5px;
+	margin-left: -20px;
+	margin-bottom: 10px;
+	padding:0px 5px 10px 0px;
+	width: 100%;
+	min-width: 500px;
+	-webkit-transition: width 0.3s;
+	-moz-transition: width 0.3s;
+	transition: width 0.3s;
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+
+.rr4{
+	margin-top: 5px;
+	margin-left: -20px;
+	margin-bottom: 10px;
+	padding:0px 5px 10px 0px;
+	width: 100%;
+	min-width: 500px;
+	-webkit-transition: width 0.3s;
+	-moz-transition: width 0.3s;
+	transition: width 0.3s;
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+
+.mobile-right2 {
+	width: 80%;
+}
+
+.mobile-right2_equip {
+    width: 80%;
+}
+
+
+#siteTree_aside{
+	margin-top: 15px;
+	margin-right: -20px;
+}
+
+#table th {
+	background-color: #eee;
+	color:#262C43;
+}
+
+#tableMatch th {
+	background-color: #eee;
+	color:#262C43;
+}
+
+#tableRuleChiller th {
+	background-color: white;
+	color:#262C43;
+}
+#tableRuleChiller tr {
+	background-color: white;
+	color:gray;
+}
+
+#tableRuleChillerPlant th {
+    background-color: white;
+    color:#262C43;
+}
+#tableRuleChillerPlant tr {
+    background-color: white;
+    color:gray;
+}
+
+#tableRuleAHU th {
+	background-color: white;
+	color:#262C43;
+}
+#tableRuleAHU tr {
+	background-color: white;
+	color:gray;
+}
+
+#tableRuleVAV th {
+	background-color: white;
+	color:#262C43;
+}
+#tableRuleVAV tr {
+	background-color: white;
+	color:gray;
+}
+
+div#divRuleChiller {
+	margin-top: -15px;
+}
+
+div#divRuleChillerPlant {
+	margin-top: -25px;
+}
+
+div#divRuleAHU {
+	margin-top: -25px;
+}
+
+div#divRuleVAV {
+	margin-top: -25px;
+}
+
+#btnShowHide {
+	border:0;
+	background-color: #262C43;
+}
+#btnMatch {
+	border:0;
+	background-color: #262C43;
+}
+#btnGenTables{
+	border:0;
+	background-color: #262C43;
+}

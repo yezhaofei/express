@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/mvc    
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <mvc:annotation-driven />
+
+    <context:component-scan base-package="com.zf_lab.express" />
+
+
+    <bean id="springTool" class="com.zf_lab.express.util.SpringTool"></bean>
+
+
+    <!-- ==================================================== -->
+    <!-- Front End Configuration -->
+    <!-- ==================================================== -->
+    <bean id="urlMapping"
+          class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/station/*">stationController</prop>
+                <prop key="/goods/*">goodsController</prop>
+                <prop key="/user/*">userController</prop>
+                <prop key="/login/*">loginController</prop>
+                <prop key="/visual/*">visualizeController</prop>
+                <prop key="/option/*">optionController</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list >
+                <ref bean="mappingJacksonHttpMessageConverter" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>application/json;charset=UTF-8</value>
+                <value>text/html;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <mvc:resources mapping="/css/**" location="/css/" />
+    <mvc:resources mapping="/js/**" location="/js/" />
+    <mvc:resources mapping="/pages/**" location="/pages/" />
+    <mvc:resources mapping="/image/**" location="/image/" />
+    <mvc:resources mapping="/fonts/**" location="/fonts/" />
+
+
+    <!-- ==================================================== -->
+    <!-- Controller Beans -->
+    <!-- ==================================================== -->
+    <bean id="loginController" class="com.zf_lab.express.controller.LoginController">
+    </bean>
+
+    <bean id="stationController" class="com.zf_lab.express.controller.StationController">
+    </bean>
+
+    <bean id="goodsController" class="com.zf_lab.express.controller.GoodsController">
+    </bean>
+
+    <bean id="userController" class="com.zf_lab.express.controller.UserController">
+    </bean>
+
+    <bean id="visualizeController" class="com.zf_lab.express.controller.VisualizeController">
+    </bean>
+
+    <bean id="optionController" class="com.zf_lab.express.controller.OptionController">
+    </bean>
+
+    <!-- ==================================================== -->
+    <!-- Database Configurations -->
+    <!-- ==================================================== -->
+    <bean id="userDAO" class="com.zf_lab.express.persistance.UserDAO">
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+
+    <bean id="stationDAO" class="com.zf_lab.express.persistance.StationDAO">
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+
+    <bean id="goodsDAO" class="com.zf_lab.express.persistance.GoodsDAO">
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+
+    <bean id="visualizeDAO" class="com.zf_lab.express.persistance.VisualizeDAO">
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/express" />
+        <property name="username" value="root" />
+        <property name="password" value="123456" />
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <!-- ==================================================== -->
+    <!-- Cyber Security Configuration -->
+    <!-- ==================================================== -->
+    <bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+        <constructor-arg name="strength" value="12"/>
+    </bean>
+
+
+</beans>    

@@ -1,0 +1,32 @@
+create database express;
+
+CREATE TABLE IF NOT EXISTS Users (
+  `ID` INT(11) NOT NULL AUTO_INCREMENT,
+  `User` TEXT NOT NULL,
+  `Pwd` varchar(255) DEFAULT NULL,
+  `Stations` TEXT NOT NULL,
+  PRIMARY KEY (`ID`));
+
+CREATE TABLE IF NOT EXISTS Stations (
+    `ID` INT(11) NOT NULL auto_increment,
+    `Station` TEXT NOT NULL,
+    `Location` TEXT NOT NULL,
+	`Description` TEXT NULL,
+    primary key (`ID`));
+
+CREATE TABLE IF NOT EXISTS Goods (
+    `ID` INT(11) NOT NULL auto_increment,
+    `Date` timestamp NOT NULL,
+    `Barcode` TEXT NOT NULL,
+    `Weight` DOUBLE NULL default NULL,
+    `Station` TEXT NOT NULL,
+    `InputWay` TEXT NOT NULL,
+    `Mark` Text NULL default NULL,
+    primary key (`ID`));
+
+CREATE TABLE IF NOT EXISTS InputWay (
+	`ID` INT(11) NOT NULL auto_increment,
+    `InputWay` TEXT NOT NULL,
+    `Description` TEXT NULL default NULL,
+    primary key (`ID`));
+

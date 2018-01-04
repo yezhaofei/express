@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title>Data Chart</title>
+    <link rel="stylesheet" href="../css/bootstrap-editable.css"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-table.css">
+    <link rel="stylesheet" href="../css/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-dialog.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">
+    <link rel="stylesheet" href="../css/homebase.css">
+    <link rel="stylesheet" href="../css/ui_chart.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+    <script src="../js/echarts.min.js"></script>  <!-- 导入echarts所需要的jar包  -->
+    <script src="../js/echarts.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-treeview.js"></script>
+    <script src="../js/bootstrap-dialog.min.js"></script>
+    <script src="../js/bootstrap-table.js"></script>
+    <script src="../js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script src="../js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+    <script src="../js/customPlugin.js"></script>
+    <script src="../js/h5utils.js"></script>
+    <script src="../js/homebase.js"></script>
+    <script src="../js/ui_chart.js"></script>
+</head>
+<body>
+<div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12" id="div_root">
+    <div class="row" id="div_row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="lr">
+            <div id="lr1">
+                <img id="i1" src="../image/login/ecust_login_white.png">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="lr2">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="lr21">
+                    <div id="lr211"><a href="#"><img id="hnav1" src="../image/home_nav/hn10.png"></a></div>
+                    <div id="lr212"><a href="#" id="goConfigsiteBtn"><img id="hnav2" src="../image/home_nav/hn20.png"></a></div>
+                    <div id="lr213"><a href="#"><img id="hnav3" src="../image/home_nav/hn31.png"></a></div>
+                </div>
+                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" id="siteTree_aside" style="display:block;">
+                    <div class="panel panel-primary" style="border:0">
+                        <div class="panel-heading" style="background-color:#262C43">
+                            <h3 class="panel-title">Station Tree</h3>
+                        </div>
+                        <div class="panel-body right_centent">
+                            <div id="tree" style="overflow: auto; float:right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <div class="rr1 col-xs-12 col-sm-12 col-md-12 col-lg-12" id="topRight">
+                <span id="s1"><strong>EXPRESS MANAGEMENT SYSTEM</strong></span>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="show">
+                        <img src="../image/login/u17.png">
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" id="uiShow" style="width: 19%;">
+                        <li><a href="#"  id="upRule" style="font-weight: 600;font-size: large;color:#262C43;">Config Station</a></li>
+                        <li><a href="#"  id="logout" style="font-weight: 600;font-size: large;color:#262C43;">&nbsp;&nbsp;&nbsp;Log Out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    </ul>
+                </div>
+                <a href="#"><img src="../image/login/u37.png"></a>
+                <a href="#"><img src="../image/login/u31.png"></a>
+            </div>
+            <div id="chart_table1" class="container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="r12" class="row">
+                    <div id="echartTwo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    </div>
+                </div>
+                <div id="r13" class="row">
+                    <div id="echartTable" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div id="reportTableDiv" style="margin-top: 6px;">
+                            <table id="reportTable"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div id="chart_table2" class="container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="r21" class="row ">
+                    <div id="equipEchartOneL" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    </div>
+                    <div id="equipEchartOneR" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    </div>
+                </div>
+                <div id="r22" class="row">
+                    <div id="equipEchartTwo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    </div>
+                </div>
+                <div id="r23" class="row">
+                    <div id="equipEchartTable" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div id="reportEquipTableDiv" style="margin-top: 6px;">
+                            <table id="reportEquipTable" ></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="chart_Dashboard" class="container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div style="height:100px;" class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <button type="button" class="btn btn-primary" style="margin-top: 16px;margin-left: 18px;">Total Station&nbsp;:&nbsp; <span class="badge" id="tolEquip">5</span></button>
+                        <button type="button" class="btn btn-success" style="margin-top: 16px;margin-left: 40px;">Total Goods&nbsp;:&nbsp; <span class="badge" id="tolSensor">3120</span></button>
+                        <button type="button" class="btn btn-danger" style="margin-top: 16px;margin-left: 40px;">Total Special&nbsp;:&nbsp;<span class="badge" id="tolAlarms">20</span></button>
+                    </div>
+                </div>
+                <div id="r31" class="row ">
+                    <div id="dashEchartOne" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div id="dashPieOne" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        </div>
+                        <div id="dashPieTwo" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        </div>
+                    </div>
+                </div>
+                <div id="r32" class="row">
+                    <div id="dashEchartTwo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    </div>
+                </div>
+                <div id="r33" class="row">
+                    <div id="dashEchartThree" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

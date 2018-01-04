@@ -1,0 +1,130 @@
+@CHARSET "UTF-8";
+
+div#div_root{
+	min-width: 640px;
+}
+
+div#lr1{
+	background-color: #262c43;
+	height: 100px;
+	border-radius: 10px;
+}
+
+img#i1{
+	height: 50%;
+	margin-top: 25px;
+	margin-left: 60px;
+}
+
+div#lr21{
+	margin-top: 2px;
+	background-color: #262c43;
+	height: 100%;
+	width: 25%;
+	min-width: 70px;
+	border-radius: 5px;
+}
+
+div#rr1{
+	background-color: #262c43;
+	color: #eee;
+	border-radius: 10px;
+	height: 100px;
+	margin-left: -20px;
+	min-width: 700px;
+}
+
+div#rr1 a{
+	float: right;
+	margin: 28px 15px;
+}
+
+div#rr1 img{
+	height: 35px;
+}
+
+span#s1{
+	float: left;
+	font-size: 32px;
+	font-family: arial;
+	margin-top: 24px;
+	margin-left: 40px;
+}
+
+div#rr2{
+	margin: auto;
+	font-family: arial;
+	font-size: 50px;
+	width: 100%;
+}
+div#rr21{
+	margin: auto;
+	font-family: arial;
+	font-size: 50px;
+	width: 100%;
+}
+
+div#rr3{
+	margin: auto;
+	font-family: arial;
+	font-size: 25px;
+	width: 100%;
+}
+div#rr31{
+	margin: auto;
+	font-family: arial;
+	font-size: 25px;
+	width: 100%;
+}
+div#rr4{
+	 padding-top: 60px;
+	 margin-bottom: 10px;
+	 margin-left: 70px;
+	 width: 66%;
+}
+div#rr41{
+	padding-top: 60px;
+	margin-bottom: 10px;
+	margin-left: 70px;
+	width: 66%;
+}
+
+div#rr5{
+	margin-bottom: 60px;
+	margin-left: 70px;
+	width: 66%;
+}
+div#rr51{
+	margin-bottom: 60px;
+	margin-left: 70px;
+	width: 66%;
+}
+#username{
+	height: 40px;
+}
+
+#password{
+	height: 40px;
+}
+#usernameReg{
+	height: 40px;
+}
+
+#passwordReg{
+	height: 40px;
+}
+#btnSignIn{
+	margin-left: 0px;
+}
+#btnReg{
+	margin-left: 0px;
+}
+p#p_newaccount{
+	margin-left: 52px;
+	font-family:arial;
+	font-size:1.6rem;
+}
+
+p#pincorrect{
+	color: red;
+}

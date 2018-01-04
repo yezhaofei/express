@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+
+#upRule:hover   {background-color: #4174ff;}
+#btnSend:hover   {background-color: #4174ff;}
+#logout:hover   {background-color: #4174ff;}
+
+.mobile-right {
+    float: right;
+    margin-right: 20px;
+}
+.mobile-right2 {
+    width: 80%;
+}
+
+#siteTree_aside{
+	margin-top: 15px;
+	margin-right: -20px;
+}
+
+#modal_submit .modal-content{
+    background-color: #262C43;
+}
+
+#tips_p_submit{
+    font-size: 20px;
+}
+
+div#lr213{
+    margin-left: -15px;
+    background-color: #ffffff;
+    height: 80px;
+    width: 60px;
+    border-radius: 5px;
+}
+
+#lr211,#lr212, #lr214, #lr215, #lr216, #lr217{
+    margin-left: -15px;
+    background-color: #262C43;
+    height: 80px;
+    width: 60px;
+    border-radius: 5px;
+}
+div #chart_table{
+    height: 900px;
+    background-color: #ffffff;
+    margin-top: 3px;
+    margin-left: -20px;
+}
+div #echartOne{
+    height: 300px;
+}
+div #echartTwo{
+    height: 300px;
+}
+div #echartTable{
+     height: 300px;
+ }
+div #equipEchartOneL{
+    height: 300px;
+}
+div #equipEchartOneR{
+    height: 300px;
+}
+div #equipEchartTwo{
+    height: 300px;
+}
+div #equipEchartTable{
+    height: 300px;
+}
+div #chart_Dashboard{
+    height: 1100px;
+    background-color: #ffffff;
+    margin-top: 3px;
+    margin-left: -20px;
+}
+div #dashEchartOne{
+    height: 300px;
+}
+div #dashPieOne{
+    height: 300px;
+    width: 50%;
+}
+div #dashPieTwo{
+    height: 300px;
+    width: 50%;
+}
+div #dashPieThree{
+    height: 300px;
+}
+div #dashEchartTwo{
+    height: 200px;
+}
+div #dashEchartThree{
+    height: 200px;
+}
+/*div #dashEchartFour{
+    height: 200px;
+}*/
+div #dateSeletor{
+    height: 100px;
+}
+#myModalLabelsend{
+    color: #333;
+}
+#btnSendReport{
+    color: #fff;
+    background-color: #262C43;
+    border-color: #262C43;
+}
+#btnCloseSR{
+    color: #fff;
+    background-color: #262C43;
+    border-color: #262C43;
+}

@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir:'libs',include:['*.jar'])
+    providedCompile group: 'commons-collections', name: 'commons-collections', version: '3.1'
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+    compile "org.springframework:spring-webmvc:3.1.0.RELEASE"
+    compile "org.springframework:spring-web:3.1.0.RELEASE"
+    providedCompile 'org.springframework:spring-context-support:3.1.0.RELEASE'
+    providedCompile "org.springframework:spring-tx:3.1.0.RELEASE"
+    providedCompile "commons-beanutils:commons-beanutils:1.6.1"
+
+    compile "org.codehaus.jackson:jackson-mapper-asl:1.9.11"
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.1.2'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.1.2'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.1.2'
+
+    compile 'org.springframework.security:spring-security-web:3.2.10.RELEASE'
+    compile group: 'org.apache.commons', name: 'commons-pool2', version: '2.0'
+
+    providedCompile "javax.servlet:servlet-api:2.5"
+    compile 'org.json:json:20090211'
+    compile 'org.springframework.data:spring-data-neo4j:4.2.4.RELEASE'
+    compile group: 'javax.persistence', name: 'persistence-api', version: '1.0'
+
+    providedCompile 'org.slf4j:slf4j-api:1.6.1'
+    runtime 'org.slf4j:slf4j-jdk14:1.6.1'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
+
+    testCompile 'junit:junit:4.12'
+    testCompile "org.springframework:spring-test:3.2.3.RELEASE"
+}
+

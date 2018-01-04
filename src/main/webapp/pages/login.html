@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="renderer" content="webkit">
+	<title>Login</title>
+	<!-- <link rel="stylesheet" href="../css/homebase.css"> -->
+	<link rel="stylesheet" href="../css/login.css">
+	<!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/validationEngine.jquery.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="../js/html5shiv.min.js"></script>
+	<script src="../js/respond.min.js"></script>
+	<![endif]-->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../js/bootstrap.min.js"></script>
+	<!-- <script src="../js/jquery.cookie.js"></script>   -->
+	<script src="../js/homebase.js"></script>
+	<script src="../js/login.js"></script>
+	<script src="../js/jquery.validationEngine-zh_CN.js"></script>
+	<script src="../js/jquery.validationEngine.js"></script>
+</head>
+<body>
+<div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12" id="div_root">
+	<div class="row">
+		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding-right: 0px">
+			<div id="lr1">
+				<img id="i1" src="../image/login/ecust_login_white.png">
+			</div>
+		</div>
+		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style="padding-left: 0px">
+			<div id="rr1">
+				<span id="s1"><strong>EXPRESS MANAGEMENT SYSTEM</strong></span>
+				<a href="#"><img src="../image/login/u37.png" style="display: none;"></a>
+				<a href="#"><img src="../image/login/u31.png" style="display: none;"></a>
+				<a href="#"><img src="../image/login/u33.png" style="display: none;"></a>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<img id="background" src="../image/login/background.png" style="width:100%">
+			<!--login modal-->
+			<div id="sign_in">
+				<div class="modal-dialog" style="position: absolute;top: 130px;margin-left: 28%;width: 43%;">
+					<div class="modal-content">
+						<div class="modal-body" style="height:475px">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div class="row col-xs-8 col-xs-offset-2 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8" id="rr2">
+									<h1 class="text-center" id="title1"><b>Station Login</b></h1>
+								</div>
+								<div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2" id="rr3">
+									<p class="text-center" id="title2">Sign in via your current express station account</p>
+								</div>
+								<div class="input-group input-group-md col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-5 col-lg-offset-4" id="rr4">
+									<span class="input-group-addon">User:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<input type="text" class="form-control" id="username" placeholder="Username&nbsp;*" aria-describedby="sizing-addon1">
+									<div class="input-group-addon"><img src="../image/user.png"></div>
+								</div>
+								<div class="input-group input-group-md col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-5 col-lg-offset-4" id="rr5">
+									<span class="input-group-addon">Password:</span>
+									<input type="Password" class="form-control" id="password" placeholder="Password&nbsp;*" aria-describedby="sizing-addon1">
+									<div class="input-group-addon"><img src="../image/password.png"></div>
+								</div>
+								<div class="row" id="warning">
+									<p class="col-sm-8 col-sm-offset-8 col-lg-8 col-lg-offset-8 col-md-8 col-md-offset-8 col-xs-8 col-xs-offset-8" style="margin-left: 70px;margin-top: -28px;color: red;">incorrect username or password</p>
+								</div>
+								<div class="col-xs-2 col-xs-offset-4 col-sm-2 col-sm-offset-4 col-md-2 col-md-offset-4 col-lg-2 col-lg-offset-4" style="margin-left: 56px;">
+									<button  class="btn btn-primary btn-lg" id="btnSignIn" style="background-color: #262c43;border-color: #262c43;">Sign In</button>
+								</div>
+								<div class="col-md-6" style="width: 60%;">
+									<p class="lead"  id="p_newaccount">Don't have an account?&nbsp;<button id="goToReg" style="background-color: white;border: white;color: #4a6aa9;">Click Here.</button></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--register modal-->
+			<div id="register" >
+				<div  class="modal-dialog" style="position: absolute;top: 130px;margin-left: 28%;width: 43%;">
+					<div class="modal-content">
+						<div class="modal-body" style="height:475px">
+							<form id="target_2" class="form-horizontal">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									<div class="row col-xs-8 col-xs-offset-2 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8" id="rr21">
+										<h1 class="text-center" id="title11"><b>Station Register</b></h1>
+									</div>
+									<div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2" id="rr31">
+										<p class="text-center" id="title21">Register your station account</p>
+									</div>
+									<div class="form-group form-group-lg row input-group input-group-md col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-5 col-lg-offset-4" id="rr41">
+										<span class="input-group-addon">User:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+										<input type="text" class="form-control validate[required] text-input" id="usernameReg" placeholder="Username&nbsp;*" aria-describedby="sizing-addon1">
+										<div class="input-group-addon"><img src="../image/user.png"></div>
+									</div>
+									<div class="form-group form-group-lg row input-group input-group-md col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-5 col-lg-offset-4" id="rr51">
+										<span class="input-group-addon">Password:</span>
+										<input type="password" class="form-control validate[required] text-input" id="passwordReg" placeholder="Password&nbsp;*" aria-describedby="sizing-addon1">
+										<div class="input-group-addon"><img src="../image/password.png"></div>
+									</div>
+									<div class="row col-xs-2 col-xs-offset-4 col-sm-2 col-sm-offset-4 col-md-2 col-md-offset-4 col-lg-2 col-lg-offset-4" style="margin-left: 56px;">
+										<button class="btn btn-primary btn-lg" id="btnReg" type="submit" style="margin-left: 28px;background-color: #262c43;border-color: #262c43;">Register</button>
+										<button class="btn btn-primary btn-lg" id="btnReturn" style="margin-left: 166px;margin-top: -67px;background-color: #262c43;border-color: #262c43;">&nbsp;&nbsp;Back&nbsp;&nbsp;</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
